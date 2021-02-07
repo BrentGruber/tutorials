@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+
+  redis:
+    container_name: redis
+    image: redis
+    networks:
+      - go
+
+  server:
+    build: .
+    ports:
+      - "4040:4040"
+    depends_on:
+      - redis
+    networks:
+      - go
+
+networks: 
+  go:
+    driver: bridge
