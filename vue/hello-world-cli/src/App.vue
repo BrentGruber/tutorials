@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style>
-  .button {
+  button {
     background: #009435;
     border: 1px solid #009435;
   }
